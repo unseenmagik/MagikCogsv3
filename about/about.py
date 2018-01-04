@@ -4,7 +4,7 @@ class About:
     """More information about Magik Bot"""
     
 
-    @commands.command(pass_context=True)
+    @commands.command()
     async def about(self, ctx):
         """About Magik Bot"""
         
