@@ -1,4 +1,4 @@
-from .embedmaker import Embedmaker
+from .embedmaker import EmbedMaker
 
 def setup(bot):
-    bot.add_cog(Embedmaker())
+    bot.add_cog(EmbedMaker())
