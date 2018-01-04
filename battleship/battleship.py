@@ -10,8 +10,8 @@ from random import randint
 
 class Battleship:
 
-    @commands.command()
-    async def battlehelp(self):
+    @commands.command(pass_context=True)
+    async def battlehelp(self, ctx):
 
         embed=discord.Embed(
             title="About Battleship", 
