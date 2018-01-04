@@ -1,4 +1,4 @@
-from .about import About
+from .about import about
 
 def setup(bot):
-    bot.add_cog(about())
+    bot.add_cog(About())
