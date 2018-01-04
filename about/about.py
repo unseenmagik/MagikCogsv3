@@ -1,6 +1,6 @@
 from discord.ext import commands
 
-class about:
+class About:
     """More information about Magik Bot"""
     
     def __init__(self, bot):
