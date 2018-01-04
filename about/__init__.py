@@ -1,4 +1,4 @@
-from .about import About
+from .magikbot import Magikbot
 
 def setup(bot):
-    bot.add_cog(About())
+    bot.add_cog(Magikbot())
