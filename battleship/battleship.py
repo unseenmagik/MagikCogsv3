@@ -4,9 +4,6 @@ from random import randint
 
 class Battleship:
 
-    def __init__(self, bot):
-        self.bot = bot
-
     @commands.command(pass_context=True)
     async def battleship(self, ctx):
 
@@ -196,17 +193,17 @@ class Battleship:
 
             #Send Embed here, edit later#
             if embedPrint == 0:
-                message_Embed = await self.bot.say(embed=reply)
+                message_Embed = await ctx.send(embed=reply)
 
             else:
-                await self.bot.edit_message(message_Embed, embed=reply)
+                await ctx.edit_message(message_Embed, embed=reply)
 
             guess_x = -1
             guess_y = -1
-            await self.bot.send_typing(channel)
+            await ctx.send_typing(channel)
             guessing = await ctx.send("\n"+"Guess X and Y:")                
             msg = await self.bot.wait_for_message(timeout=30,author=author, channel=channel)
-            await self.bot.delete_message(guessing)
+            await ctx.delete_message(guessing)
 
             if msg.content == "Cancel" or msg.content == "cancel":
                 await ctx.send("Stopping game.")
@@ -255,7 +252,7 @@ class Battleship:
                     
                 if total == 4:
                     await ctx.send("You hit em all captain.\n Game Over.")
-                    await self.bot.edit_message(message_Embed, embed=reply)
+                    await ctx.edit_message(message_Embed, embed=reply)
                     #loop = False
                         
                 break
@@ -362,7 +359,7 @@ class Battleship:
             if embedPrint == 0:
                 shipM = await ctx.send(reply2)
             else:
-                await self.bot.edit_message(shipM, reply2)
+                await ctx.edit_message(shipM, reply2)
             embedPrint += 1
             turn -= 1
             turn2 += 1
@@ -376,7 +373,7 @@ class Battleship:
         board[ship2a][ship2b] = ":white_circle:"
         board[ship2a][ship2c] = ":white_circle:"
         reply = embed_board(turn2)                    
-        await self.bot.edit_message(message_Embed, embed=reply)
+        await ctx.edit_message(message_Embed, embed=reply)
         await ctx.send(over)
         print(" ")
         print("Here are all the ships, they're labeled M.")
