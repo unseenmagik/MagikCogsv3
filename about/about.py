@@ -3,8 +3,6 @@ from discord.ext import commands
 class About:
     """More information about Magik Bot"""
     
-    def __init__(self, bot):
-        self.bot = bot
 
     @commands.command(pass_context=True)
     async def about(self):
