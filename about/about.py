@@ -18,5 +18,5 @@ class About:
         embed.add_field(name="Discord & API Version", value="Discord - 3.5.2 & API version 0.16.12", inline=True)
         embed.set_footer(text="Magik Bot - Providing Discord support since September 2017")
         
-        await self.bot.say(embed=embed)
+        await ctx.send(embed=embed)
        
