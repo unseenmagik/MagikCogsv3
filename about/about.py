@@ -1,6 +1,6 @@
 from discord.ext import commands
 
-class About:
+class magik:
     """More information about Magik Bot"""
     
 
