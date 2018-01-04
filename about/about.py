@@ -5,7 +5,7 @@ class About:
     
 
     @commands.command(pass_context=True)
-    async def about(self):
+    async def about(self, ctx):
         """About Magik Bot"""
         
         embed=discord.Embed(title="About Magik Bot", url='http://www.magikbot.co.uk', description="A discord bot made with love. Created for Discord Administration support. With hundreds of commands, admin, mod, support, games, fun and more. For more information see below:", color=0x207cee)
