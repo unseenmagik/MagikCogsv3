@@ -200,7 +200,7 @@ class Battleship:
 
             guess_x = -1
             guess_y = -1
-            await ctx.send_typing(channel)
+            #await ctx.send_typing(channel)
             guessing = await ctx.send("\n"+"Guess X and Y:")                
             msg = await self.bot.wait_for_message(timeout=30,author=author, channel=channel)
             await ctx.delete_message(guessing)
