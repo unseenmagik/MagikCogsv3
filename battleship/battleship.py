@@ -75,7 +75,7 @@ class Battleship:
         embed.set_footer(
             text="Magik Bot - Providing Discord support since September 2017")
         
-        await self.bot.say(embed=embed) 
+        await ctx.send(embed=embed) 
         
 
 
@@ -113,7 +113,7 @@ class Battleship:
 
         print ("Let's play Battleship!")
         print (" ")
-        await self.bot.say("Let's play Battleship!"+ "\n")
+        await ctx.send("Let's play Battleship!"+ "\n")
  
         
 
@@ -204,12 +204,12 @@ class Battleship:
             guess_x = -1
             guess_y = -1
             await self.bot.send_typing(channel)
-            guessing = await self.bot.say("\n"+"Guess X and Y:")                
+            guessing = await ctx.send("\n"+"Guess X and Y:")                
             msg = await self.bot.wait_for_message(timeout=30,author=author, channel=channel)
             await self.bot.delete_message(guessing)
 
             if msg.content == "Cancel" or msg.content == "cancel":
-                await self.bot.say("Stopping game.")
+                await ctx.send("Stopping game.")
                 print("Stopping the game.")
                 #loop = False
                 break
@@ -245,16 +245,16 @@ class Battleship:
                     
             except discord.errors.Forbidden:
                 print('discord.errors.Forbidden')
-                await self.bot.say('Error. Don\'t have the permissions. Stopping game.')
+                await ctx.send('Error. Don\'t have the permissions. Stopping game.')
                 #loop = False
                 break
                 
             if total == 4:
-                await self.bot.say("You sunk all the ships!")
+                await ctx.send("You sunk all the ships!")
                 print("All ships sunk.")
                     
                 if total == 4:
-                    await self.bot.say("You hit em all captain.\n Game Over.")
+                    await ctx.send("You hit em all captain.\n Game Over.")
                     await self.bot.edit_message(message_Embed, embed=reply)
                     #loop = False
                         
@@ -360,7 +360,7 @@ class Battleship:
                         #loop = False"""         
 
             if embedPrint == 0:
-                shipM = await self.bot.say(reply2)
+                shipM = await ctx.send(reply2)
             else:
                 await self.bot.edit_message(shipM, reply2)
             embedPrint += 1
@@ -377,7 +377,7 @@ class Battleship:
         board[ship2a][ship2c] = ":white_circle:"
         reply = embed_board(turn2)                    
         await self.bot.edit_message(message_Embed, embed=reply)
-        await self.bot.say(over)
+        await ctx.send(over)
         print(" ")
         print("Here are all the ships, they're labeled M.")
 
