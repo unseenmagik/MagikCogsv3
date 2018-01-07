@@ -1,4 +1,4 @@
-from .botstats import Botstats
+from .botstats import BotStats
 
 def setup(bot):
-    bot.add_cog(Botstats())
+    bot.add_cog(BotStats())
