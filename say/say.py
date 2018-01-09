@@ -1,9 +1,8 @@
 import discord
-from .utils import checks
 from discord.ext import commands
 
 class Say:
-    """Make your bot say or upload something in the channel you want."""
+    """Make your bot say something in the channel you want."""
 
 
     @commands.command()
