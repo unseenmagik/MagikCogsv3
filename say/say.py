@@ -9,8 +9,9 @@ class Say:
     async def send(self, ctx): 
         """This does stuff!"""
         # Your code will go here
-            if ctx.invoked_subcommand is None
-        pages = self.bot.formatter.format_help_for(ctx, ctx.command)
+        #Will focus on here later on, should manually input the help than using self.
+        if ctx.invoked_subcommand is None
+            pages = self.bot.formatter.format_help_for(ctx, ctx.command)
         for page in pages:
             await ctx.send(ctx.message.channel, page)
            
@@ -31,7 +32,10 @@ class Say:
 
         else:
             pass"""
-        await self.bot.delete_message(message)
+        try:
+            await self.bot.delete_message(message)
+        except Forbidden:
+            print("Unable to delete Users message. Proceeding...")
         await self.bot.say(text)
 
             
@@ -51,9 +55,12 @@ class Say:
         
         else:
             await self.bot.delete_message(message)"""
-        await self.bot.delete_message(message)
+        try:
+            await self.bot.delete_message(message)
+        except Forbidden:
+            print("Unable to delete Users message. Proceeding...")
+        await self.bot.say(text)
 
-        await ctx.send(channel, text)
 
 
 
