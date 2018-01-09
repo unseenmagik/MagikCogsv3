@@ -27,7 +27,7 @@ class Say:
         """Say a message in the actual channel"""
         
         message = ctx.message
-        server = message.server
+        server = message.guild
         
         if server.id not in self.settings:
             self.settings[server.id] = {'autodelete': '0'}
@@ -59,72 +59,7 @@ class Say:
 
         await self.bot.send_message(channel, text)
 
-    @send.command(pass_context=True)
-    async def upload(self, ctx, file = None, *, comment = None):
-        """Upload a file from your local folder"""
-
-        message = ctx.message
-        server = message.server
-        
-        if file == None:
-            if os.listdir('data/say/upload') == []:
-                await self.bot.say("No files to upload. Put them in `data/say/upload`")
-                return
-            
-            msg = "List of available files to upload:\n\n"
-            for file in os.listdir('data/say/upload'):
-                msg += "- `{}`\n".format(file)
-            await self.bot.say(msg)
-            return
-        
-        if server.id not in self.settings:
-            self.settings[server.id] = {'autodelete': '0'}
-        
-        if '.' not in file:
-            for fname in os.listdir('data/say/upload'):
-                if fname.startswith(file):
-                    file += '.' + fname.partition('.')[2]
-                    break
-
-        if os.path.isfile('data/say/upload/{}'.format(file)) is True:
-            
-            if self.settings[server.id]['autodelete'] == '1':
-                await self.bot.delete_message(message)
-
-
-            if comment is not None:
-                await self.bot.upload(fp = path, content = comment)
-
-            else:
-                await self.bot.upload(fp = 'data/say/upload/{}'.format(file))
-        else:
-            await self.bot.say("That file doesn't seem to exist. Make sure it is the good name, try to add the extention (especially if two files have the same name) and if you just added a new file, make sure to reload the cog by typing `" + ctx.prefix + "reload say`")
-
-    @send.command(pass_context=True)
-    async def dm(self, ctx, user : discord.Member, *, text):
-        """Send a message to the user in direct message. 
-            No author mark, send exactly what you wrote"""
     
-        server = ctx.message.server
-        message= ctx.message
-        
-        if server.id not in self.settings:
-            self.settings[server.id] = {'autodelete': '0'}
-
-        if self.settings[server.id]['autodelete'] == '1':
-            await self.bot.delete_message(message)
-        
-        else:
-            pass
-        
-        
-        try:
-            await self.bot.send_message(user, text)
-
-        except:
-            await self.bot.say("I can't send DM to this user, he may had blocked DM on this server.")
-
-
     @checks.serverowner_or_permissions(administrator=True)
     @send.command(pass_context=True)
     async def autodelete(self, ctx):
@@ -153,22 +88,3 @@ class Say:
 
         dataIO.save_json('data/say/settings.json', self.settings)
 
-
-def check_folders():
-    folders = ('data', 'data/say/', 'data/say/upload/')
-    for folder in folders:
-        if not os.path.exists(folder):
-            print("Creating " + folder + " folder...")
-            os.makedirs(folder)
-
-
-def check_file():
-    contents = {}
-    if not os.path.exists('data/say/settings.json'):
-        print("Creating empty settings.json")
-        dataIO.save_json('data/say/settings.json', contents)
-
-def setup(bot):
-    check_folders()
-    check_file()
-    bot.add_cog(Say(bot))
