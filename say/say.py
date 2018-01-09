@@ -34,9 +34,11 @@ class Say:
             pass"""
         try:
             await self.bot.delete_message(message)
+            
         except Forbidden:
             print("Unable to delete Users message. Proceeding...")
-        await self.bot.say(text)
+        
+        await ctx.send(text)
 
             
     @send.command(pass_context=True)
@@ -57,9 +59,11 @@ class Say:
             await self.bot.delete_message(message)"""
         try:
             await self.bot.delete_message(message)
+            
         except Forbidden:
             print("Unable to delete Users message. Proceeding...")
-        await self.bot.say(text)
+            
+        await ctx.send(text)
 
 
 
