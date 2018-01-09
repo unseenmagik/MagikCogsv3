@@ -7,6 +7,8 @@ class Say:
 
 
     @commands.command()
-    async def send(self, ctx): # Had to choose something else than say :c have a better idea ?
-        await ctx.send(ctx.message.channel, page)
+    async def send(self, ctx): 
+        """This does stuff!"""
+        # Your code will go here
+        await ctx.send("The bot will say what i want it to say")
 
