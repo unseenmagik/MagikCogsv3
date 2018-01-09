@@ -9,5 +9,10 @@ class Say:
     async def send(self, ctx): 
         """This does stuff!"""
         # Your code will go here
-        await ctx.send("The bot will say what i want it to say")
+        if ctx.invoked_subcommand is None
+        pages = self.bot.formatter.format_help_for(ctx, ctx.command)
+        for page in pages:
+            await ctx.send(ctx.message.channel, page)
+
+
 
