@@ -9,13 +9,13 @@ class Say:
     async def send(self, ctx): 
         """This does stuff!"""
         # Your code will go here
-        if ctx.invoked_subcommand is None
+            if ctx.invoked_subcommand is None
         pages = self.bot.formatter.format_help_for(ctx, ctx.command)
         for page in pages:
             await ctx.send(ctx.message.channel, page)
            
         
-            @send.command(pass_context=True)
+    @send.command(pass_context=True)
     async def here(self, ctx, *, text):
         """Say a message in the actual channel"""
         
