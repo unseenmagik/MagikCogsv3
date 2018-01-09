@@ -10,10 +10,11 @@ class Say:
         """This does stuff!"""
         # Your code will go here
         #Will focus on here later on, should manually input the help than using self.
-        if ctx.invoked_subcommand is None
+        var = here(self, ctx)
+        """if ctx.invoked_subcommand is None
             pages = self.bot.formatter.format_help_for(ctx, ctx.command)
         for page in pages:
-            await ctx.send(ctx.message.channel, page)
+            await ctx.send(ctx.message.channel, page)"""
            
         
     @send.command(pass_context=True)
@@ -22,7 +23,6 @@ class Say:
         
         message = ctx.message
         server = message.guild
-        
         #Remove this because we would always want your message to auto delete
         """if server.id not in self.settings:
             self.settings[server.id] = {'autodelete': '0'}
@@ -38,7 +38,7 @@ class Say:
         except Forbidden:
             print("Unable to delete Users message. Proceeding...")
         
-        await ctx.send(text)
+        await ctx.send(message)
 
             
     @send.command(pass_context=True)
@@ -63,7 +63,7 @@ class Say:
         except Forbidden:
             print("Unable to delete Users message. Proceeding...")
             
-        await ctx.send(text)
+        await ctx.send(message)
 
 
 
