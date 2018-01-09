@@ -14,7 +14,7 @@ class About:
         embed.set_thumbnail(url='https://cdn.discordapp.com/avatars/375541314139324416/054ca0e904c2120658a1d31623819703.png?size=1024')
         embed.add_field(name="Discord Support", value="https://discord.gg/kQjTw5Z", inline=True)
         embed.add_field(name="Website", value="http://www.magikbot.co.uk", inline=True)
-        embed.add_field(name="Auther", value="Magik#0203", inline=False)
+        embed.add_field(name="Author", value="Magik#0203", inline=False)
         embed.add_field(name="Discord & API Version", value="Discord - 3.5.2 & API version 1.0.0a", inline=True)
         embed.set_footer(text="Magik Bot - Providing Discord support since September 2017")
         
