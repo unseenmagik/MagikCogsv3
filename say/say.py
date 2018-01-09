@@ -6,7 +6,7 @@ class Say:
     """Make your bot say or upload something in the channel you want."""
 
 
-    @commands.group(pass_context=True)
+    @commands.command()
     async def send(self, ctx): # Had to choose something else than say :c have a better idea ?
         await ctx.send(ctx.message.channel, page)
 
