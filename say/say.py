@@ -22,15 +22,16 @@ class Say:
         message = ctx.message
         server = message.guild
         
-        if server.id not in self.settings:
+        #Remove this because we would always want your message to auto delete
+        """if server.id not in self.settings:
             self.settings[server.id] = {'autodelete': '0'}
 
         if self.settings[server.id]['autodelete'] == '1':
             await self.bot.delete_message(message)
 
         else:
-            pass
-
+            pass"""
+        await self.bot.delete_message(message)
         await self.bot.say(text)
 
             
@@ -41,14 +42,16 @@ class Say:
         message = ctx.message
         server = message.guild
         
-        if server.id not in self.settings:
+        #Same thing as above
+        """if server.id not in self.settings:
             self.settings[server.id] = {'autodelete': '0'}
 
         if self.settings[server.id]['autodelete'] == '0' or server.id not in self.settings:
             pass
         
         else:
-            await self.bot.delete_message(message)
+            await self.bot.delete_message(message)"""
+        await self.bot.delete_message(message)
 
         await ctx.send(channel, text)
 
