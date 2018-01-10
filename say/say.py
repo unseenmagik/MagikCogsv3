@@ -7,7 +7,7 @@ class Say:
 
     @commands.command(pass_context=True)
     async def send(self, ctx): 
-        """This does stuff!"""
+        """Use [p]send <text> to make the bot say what you type."""
         msg = ctx.message.content
         message = ctx.message
         server = message.guild
