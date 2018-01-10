@@ -10,9 +10,15 @@ class Say:
 
         msg = ctx.message.content
         message = ctx.message
+        author = ctx.message.author
         
         #This gets rid of the command "[p]say"
         msg = msg[5:]
-
-        await message.delete()
+        try:
+            await message.delete()
+            
+        except discord.Forbidden:
+            print("No permissions.")
+            Msg = "Unable to delete the command message, I don't have the adminstrative permissions to do so."
+            await ctx.send(author, Msg)
         await ctx.send(msg)
