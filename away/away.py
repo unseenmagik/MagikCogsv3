@@ -1,4 +1,4 @@
-import os
+from redbot.cogs.away.os import os
 import discord
 from redbot.cogs.away.dataIO import dataIO
 from redbot.core import checks
