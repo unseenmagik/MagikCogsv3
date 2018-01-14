@@ -1,6 +1,6 @@
 from .away import Away
 from redbot.cogs.away.dataIO import dataIO
-import os
+from redbot.cogs.away.os import os
 
 def check_folder():
     if not os.path.exists('data/away'):
