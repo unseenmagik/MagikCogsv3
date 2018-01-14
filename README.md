@@ -7,13 +7,13 @@ Currently working v3 Cogs:
 
 Where [p] is the prefix for your bot.
 
-#Say
-Use the `[p]say <text>` command to make the bot say what you want.
-Example: `[p]say I will say what you type here`
+<b>Say:</b><br>
+Use the `[p]say <text>` command to make the bot say what you want.<br>
+Example: `[p]say I will say what you type here`<br>
 If you send a blank message such as `[p]say` you will get a DM from the bot advising you the message was empty.
 
-#Away
-Tell the bot that you are away and when someone tags you with @ then the bot will reply with a message that you are away. 
-`[p]away` will give an autorespoce to tags with a simply message you are away. 
-You can also add a message so the bot can say why you are away with `[p]away <message>`
+<b>Away:</b><br>
+Tell the bot that you are away and when someone tags you with @ then the bot will reply with a message that you are away.<br> 
+`[p]away` will give an autorespoce to tags with a simply message you are away. <br>
+You can also add a message so the bot can say why you are away with `[p]away <message>`<br>
 Example `[p]away I am sleeping. Do not Disturb` The bot willl return the auto message with your comments. 
