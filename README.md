@@ -21,8 +21,8 @@ Example <b>!away I am sleeping. Do not Disturb.</b> The bot will return the auto
 <h3><b>Distance Calculator:</b><br></h3>
 Use the <b>!distance <coords></b> command and the bot will calculate the distance between the two coordinates. You will also be provided with the reccomended cooldown time.<br>
 Example: <b>!distance 51.301597 -0.598019 51.270664 -0.594132</b><br>
-This cog can be used for calculating distances for Pokemon Go ++ users. 
+This cog can be used for calculating distances for Pokemon Go ++ users. <p>
   
-  Many thanks to <b>xDp64x#9133</b> for his support on these cogs. 
+Many   thanks to <b>xDp64x#9133</b> for his support on these cogs. 
   
   
