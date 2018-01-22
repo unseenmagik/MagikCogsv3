@@ -23,7 +23,7 @@ Use the "<b>!distance <coords></b>" command and the bot will calculate the dista
 Example: "<b>!distance 51.301597 -0.598019 51.270664 -0.594132</b>"<br>
 This cog can be used for calculating distances for Pokemon Go ++ users. <p>
   
-<h3><b>Pingtime:</b><br><br>
+<h3><b>Pingtime:</b><br></h3>
 Use the "<b>!pingtime</b>" command and the bot will display the ping of the bot.<br>
 This cog can be used to see the bots response rate.<p>
   
