@@ -28,28 +28,28 @@ To install the cogs, Follow the given steps:
 
 <h2>Currently working v3 Cogs:</h2>
 
-Where <b>!</b> is the prefix for your bot.
+Where <b>[p]</b> is the prefix for your bot.
 
-<h3><b>Say:</b><br></h3>
-Use the ``<b>!say <text></b>`` command to make the bot say what you want.<br>
-  Example: <b>!say I will say what you type here</b><br>
-  If you send a blank message such as ``<b>!say</b>`` you will get a DM from the bot saying the message was empty.
+# Say:
+Use the ``[p]say <text>`` command to make the bot say what you want.
+  Example: !say I will say what you type here
+  If you send a blank message such as ``[p]say`` you will get a DM from the bot saying the message was empty.
 
-<h3><b>Away:</b><br></h3>
-Tell the bot that you are away and when someone tags you with @ then the bot will reply with a message that you are away.<br> 
-``<b>!away</b>`` will give an auto response to tags with a simple message you are away. <br>
-You can also add a message so the bot can say why you are away with ``<b>!away <message></b>``<br>
-Example: ``<b>!away I am sleeping. Do not Disturb.</b>`` The bot will return the auto message with your comments. <p>
+# Away
+Tell the bot that you are away and when someone tags you with @ then the bot will reply with a message that you are away.
+``[p]away`` will give an auto response to tags with a simple message you are away.
+You can also add a message so the bot can say why you are away with ``[p]away <message>``
+Example: ``vaway I am sleeping. Do not Disturb.`` The bot will return the auto message with your comments.
   
-<h3><b>Distance Calculator:</b><br></h3>
+# Distance Calculator:
 > NOTE: You will need **gpxpy** as a Depencency. use ``pip3 install gpxpy`` in your console. 
-Use the ``<b>!distance <coords></b>`` command and the bot will calculate the distance between the two coordinates. You will also be provided with the reccomended cooldown time.<br>
-Example: ``<b>!distance 51.301597 -0.598019 51.270664 -0.594132</b>``<br>
-This cog can be used for calculating distances for Pokemon Go ++ users. <p>
+Use the ``[p]distance <coords>`` command and the bot will calculate the distance between the two coordinates. You will also be provided with the reccomended cooldown time.
+Example: ``[p]distance 51.301597 -0.598019 51.270664 -0.594132``
+This cog can be used for calculating distances for Pokemon Go ++ users.
   
-<h3><b>Pingtime:</b><br></h3>
-Use the ``<b>!pingtime</b>`` command and the bot will display the ping of the bot.<br>
-This cog can be used to see the bots response rate.<p>
+# Pingtime:
+Use the ``[p]pingtime`` command and the bot will display the ping of the bot.
+This cog can be used to see the bots response rate.
   
 
 Many   thanks to <b>xDp64x#9133</b> for his support on these cogs. 
