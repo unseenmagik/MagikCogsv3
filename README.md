@@ -47,6 +47,9 @@ Example: ``[p]away I am sleeping. Do not Disturb.`` The bot will return the auto
 Use the ``[p]distance <coords>`` command and the bot will calculate the distance between the two coordinates. You will also be provided with the reccomended cooldown time.
 Example: ``[p]distance 51.301597 -0.598019 51.270664 -0.594132``
 This cog can be used for calculating distances for Pokemon Go ++ users.
+
+# Bot Stats:
+Use the ``[p]botstats`` command and the bot will display a list of commands for you to use. This will display information under the bots username where you see the "Game Status". you can choose a custom message or use the stats of the bot such as ``help, # of servers, # of users`` Dont forget, when you make changes using ``[p]botstats message`` you must first disable the bot stats using ``[p]botstats toggle``. 
   
 # Pingtime:
 Use the ``[p]pingtime`` command and the bot will display the ping of the bot.
