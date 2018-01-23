@@ -39,10 +39,11 @@ Use the ``[p]say <text>`` command to make the bot say what you want.
 Tell the bot that you are away and when someone tags you with @ then the bot will reply with a message that you are away.
 ``[p]away`` will give an auto response to tags with a simple message you are away.
 You can also add a message so the bot can say why you are away with ``[p]away <message>``
-Example: ``vaway I am sleeping. Do not Disturb.`` The bot will return the auto message with your comments.
+Example: ``[p]away I am sleeping. Do not Disturb.`` The bot will return the auto message with your comments.
   
 # Distance Calculator:
-> NOTE: You will need **gpxpy** as a Depencency. use ``pip3 install gpxpy`` in your console. 
+>NOTE: You will need **gpxpy** as a Depencency. use ``pip3 install gpxpy`` in your console. 
+
 Use the ``[p]distance <coords>`` command and the bot will calculate the distance between the two coordinates. You will also be provided with the reccomended cooldown time.
 Example: ``[p]distance 51.301597 -0.598019 51.270664 -0.594132``
 This cog can be used for calculating distances for Pokemon Go ++ users.
