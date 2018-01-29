@@ -1,6 +1,6 @@
 import os
 import discord
-from .dataIO import dataIO
+from redbot.cogs.away.dataIO import dataIO
 from redbot.core import checks
 from discord.ext import commands
 

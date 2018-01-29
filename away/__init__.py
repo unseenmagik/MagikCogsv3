@@ -1,5 +1,5 @@
 from .away import Away
-from .dataIO import dataIO
+from redbot.cogs.away.dataIO import dataIO
 import os
 
 def check_folder():

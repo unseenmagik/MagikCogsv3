@@ -1,0 +1,9 @@
+{
+    "AUTHOR" : "Magik#0203",
+    "SHORT" : "Starboard",
+    "DESCRIPTION" : "Create a starboard channel to save those amazing posts.",
+    "DISABLED" : false,
+    "NAME" : "Magik#0203",
+    "TAGS" : ["star,starboard,general,save,store,emoji"],
+    "INSTALL_MSG" : "Create a starboard and save posts!"
+}

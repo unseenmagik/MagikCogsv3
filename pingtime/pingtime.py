@@ -4,13 +4,13 @@ import datetime
 import time
 from random import choice, randint
 class Pingtime:
-    """Ping the bot and display response time."""
+    """Ping, with time"""
 
 
     @commands.command(pass_context=True)
     async def pingtime(self, ctx):
 
-        """Ping the bot and display response time."""
+        """Pong."""
         print("Ping Test")
         await ctx.send ('__*`Pinging...`*__')
         t1 = time.perf_counter()

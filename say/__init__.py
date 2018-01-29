@@ -1,4 +1,4 @@
-from .say import Say
+from .Betasay import betaSay
 
 def setup(bot):
-    bot.add_cog(Say())
+    bot.add_cog(betaSay())
