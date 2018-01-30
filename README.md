@@ -1,7 +1,7 @@
 # MagikCogsv3
 
 Magik Cogs v3 are for Red-DiscordBot v3. Red-DiscordBot is a multipurpose bot for Discord developed by Twentysix26.
-To submit an idea for a cog, DM me on discord. You can always find me at the official server for Red or you can find me on my own Support Server here: https://discord.gg/kQjTw5Z
+To submit an idea for a cog, DM me on discord. You can always find me at the official server for Red or you can find me on my own Support Server here: https://discord.gg/d7YGVbH
 
 Sadly, making and maintaining these cogs costs time, but no money. They're all made in my free time when I'm not doing anything else. But if you have Patreon, and you like my cogs, would you kindly think about donating some spare change by following the following link: https://www.patreon.com/magikbot and I thank you. :)
 
