@@ -54,7 +54,13 @@ Use the ``[p]botstats`` command and the bot will display a list of commands for 
 # Pingtime:
 Use the ``[p]pingtime`` command and the bot will display the ping of the bot.
 This cog can be used to see the bots response rate.
-  
+
+# Seen:
+Use the ``[p]seen <@user>`` command and the bot will tell you the last time that member was seen.
+
+# Embed Maker:
+Use the ``[p]embed`` command for a list of available options. 
+Use this to create embeds and send them to channels or via DM's. 
 
 Many   thanks to <b>xDp64x#9133</b> for his support on these cogs. 
   
