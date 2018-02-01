@@ -27,7 +27,7 @@ class Distance:
 
         def calc_embed(msg, msg2):
             embed=discord.Embed(
-                title="Distance Calculation",
+                title="",
                 description=" ",
                 color=0x207cee)
             embed.add_field(
