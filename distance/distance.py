@@ -118,7 +118,7 @@ class Distance:
                 time = "6 min"
 
             elif dist >= 5 and dist <= 8:
-                time = "2 min 30 sec min"
+                time = "2 min 30 sec"
 
             elif dist >= 4 and dist <= 5:
                 time = "2 min"
