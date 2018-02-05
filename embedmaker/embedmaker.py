@@ -14,11 +14,13 @@ class EmbedMaker:
     Make embed objects. Recall them, remove them, reuse them (etc)
     """
 
+    """
     __original_auther__ = "mikeshardmind (Sinbad#0413)"
     __original_code__ = "https://github.com/mikeshardmind/SinbadCogs/tree/master/embedmaker"
     __original authers_license__ = "https://github.com/mikeshardmind/SinbadCogs/blob/master/License.md"
     __modified_by__ = "xDp64x"
     __version__ = "1.0.0"
+    """
 
     def __init__(self, bot):
 
