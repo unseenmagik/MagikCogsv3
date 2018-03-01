@@ -18,7 +18,7 @@ class Battleship:
         embed.set_author(
             name="Magik Bot",
             url='http://www.magikbot.co.uk',
-            icon_url='https://cdn.discordapp.com/attachments/355249562719617024/357107055691169797/MB_Icon.png')
+            icon_url='https://cdn.discordapp.com/avatars/397710318912143360/851c12599886f2401958f92bdaf62dd7.png?size=1024')
         embed.set_thumbnail(
             url='https://cdn.discordapp.com/attachments/355249562719617024/365100412874784768/Battleship-ubicom-VIDEO-launch_trailer_2016_08_02-712x712_Desktop_261122.png')
         embed.add_field(
@@ -27,7 +27,7 @@ class Battleship:
             inline=True)
         embed.add_field(
             name="How many turns",
-            value="You have 10 attempts to hit my 3 ships(2 ships that are 2 by 1, 1 ship that is 1 by 1)",
+            value="You have 10 attempts to hit my 3 ships\n(2 ships that are 2 by 1, 1 ship that is 1 by 1)",
             inline=True)
         embed.add_field(
             name="Battleship Board Layout",
@@ -238,7 +238,7 @@ class Battleship:
                     await message_Embed.delete()
                     fin += 1
 
-                await shipM.delete_message()
+                await shipM.delete()
                 break
 
             elif guess_x == ship_x and guess_y == ship_y:
