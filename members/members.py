@@ -24,7 +24,7 @@ class Members:
         )
         em.add_field(
             name="**total**",
-            value="Check the total amount of members in your guild!\nExample: ``{}members total".format(prefix)
+            value="Check the total amount of members in your guild!\nExample: ``{}members total``".format(prefix)
         )
         em.add_field(
             name="**search**",
