@@ -1,5 +1,5 @@
 from .away import Away
-from .dataIO import dataIO
+#from .dataIO import dataIO
 import os
 from redbot.core.json_io import JsonIO
 from pathlib import Path
@@ -17,11 +17,10 @@ def check_folder():
 
 def check_file():
     if not g.exists():
-        print('Test1')
-        print('{}')
+        #print('Test1')
+        #print('{}')
         return {}
     return JsonIO(g)._load_json()
-    print('Test2')
     print('Creating default away.json...')
 def save_file():
     config = check_file()
