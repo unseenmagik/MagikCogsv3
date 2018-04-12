@@ -61,14 +61,14 @@ class EmbedMaker:
                                        'whitelist': []}  """# Future Proofing
         self.save_settings()
 
-    @commands.group(name="embedset", pass_context=True, no_pm=True)
+    @commands.group(name="emset", pass_context=True, no_pm=True)
     async def embedset(self, ctx):
+        """configuration settings"""
         server = ctx.guild
         print(server.id)
-        """configuration settings"""
 
         em = discord.Embed(
-            title='Commands for embedset',
+            title='Commands for emset',
             description='',
             color=0x207cee
         )
@@ -83,7 +83,7 @@ class EmbedMaker:
             inline=False
         )"""
         msg = ctx.message.content[1:]
-        if msg == 'embedset':
+        if msg == 'emset':
             await ctx.send(embed=em)
 
     @commands.group(name="embed", pass_context=True, no_pm=True)

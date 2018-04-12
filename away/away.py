@@ -33,11 +33,11 @@ class Away:
 
     @commands.command(pass_context=True, name="away")
     async def _away(self, context, *message: str):
+        """Tell the bot you're away or back."""
         dir = os.getcwd()
         config_dir = Path(dir)
         config_dir.mkdir(parents=True, exist_ok=True)
         g = config_dir / 'data/away/away.json'
-        """Tell the bot you're away or back."""
         author = context.message.author
         print(self.data)
         auth = str(author.id)

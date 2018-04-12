@@ -15,13 +15,16 @@ class BotStats:
     @checks.admin_or_permissions(administrator=True)
     @commands.group(pass_context=True)
     async def botstats(self, ctx):
+        """Display Bot Stats in game status that update every 10 seconds!"""
+        prefix = ctx.prefix
+        #print(prefix)
         msg = """Welcome to botstats! These are the commands:
           ```toggle  - Turn BotStatus on and off, like a boss
 message - You can set the way your botstats is set!
 timeout - Decide how often the BotStatus updates```
 
-Use ``!botstats <cmd_name>``
-        """
+Use ``{}botstats <cmd_name>``
+        """.format(prefix)
         message = ctx.message.content
         #botstats
         message = message[8:] 
@@ -29,7 +32,7 @@ Use ``!botstats <cmd_name>``
         if message == "s":
             await ctx.send(msg)
 
-        """Display Bot Stats in game status that update every 10 seconds!"""
+
 
         #if ctx.invoked_subcommand is None:
             #await send_cmd_help(ctx)
@@ -103,10 +106,10 @@ Use ``!botstats <cmd_name>``
                 prefix = self.imagenius["MAINPREFIX"]
                 message = botstatus.format(prefix, servers, users)
                 game = discord.Game(name=message)
-                await self.bot.change_presence(game=game, status=status)
+                await self.bot.change_presence(activity=game, status=status)
                 await asyncio.sleep(self.imagenius["SECONDS2LIVE"])
             else:
-                await self.bot.change_presence(status=None, game=None)
+                await self.bot.change_presence(activity = None, status = None)
                 return
         else:
             pass
@@ -121,7 +124,7 @@ Use ``!botstats <cmd_name>``
                 prefix = self.imagenius["MAINPREFIX"]
                 message = botstatus.format(prefix, servers, users)
                 game = discord.Game(name=message)
-                await self.bot.change_presence(game=game, status=status)
+                await self.bot.change_presence(activity=game, status=status)
                 await asyncio.sleep(self.imagenius["SECONDS2LIVE"])
             else:
                 pass

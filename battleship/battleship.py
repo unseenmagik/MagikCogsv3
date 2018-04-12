@@ -10,6 +10,7 @@ class Battleship:
 
     @commands.command(pass_context=True)
     async def battleship(self, ctx):
+        """Play a game of battleship"""
 
         embed = discord.Embed(
             title="About Battleship",

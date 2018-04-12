@@ -7,6 +7,7 @@ class Members:
 
     @commands.group(pass_context=True)
     async def members(self, ctx):
+        """Get members via names, count, etc."""
         prefix = ctx.prefix
         msg = ctx.message.content
         print(msg)

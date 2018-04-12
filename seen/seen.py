@@ -17,10 +17,10 @@ class Seen:
         self.new_data = False
 
     async def data_writer(self):
-        print('ping')
+        #print('ping')
         while self == self.bot.get_cog('Seen'):
             if self.new_data:
-                print(self.seen)
+                #print(self.seen)
                 dataIO.save_json('data/seen/seen.json', self.seen)
                 self.new_data = False
                 await asyncio.sleep(60)
@@ -35,14 +35,15 @@ class Seen:
         server = context.message.guild
         author = username
         timestamp_now = datetime.datetime.now()
-        print(timestamp_now)
+        #print(timestamp_now)
+        print("Command")
         
         #Change "server.id" to "guild.id"
         if server.id in self.seen:
             if author.id in self.seen[server.id]:
                 data = self.seen[server.id][author.id]
                 timestamp_then = datetime.datetime.fromtimestamp(data['TIMESTAMP'])
-                print(timestamp_then)
+                #print(timestamp_then)
                 timestamp = timestamp_now - timestamp_then
                 days = timestamp.days
                 seconds = timestamp.seconds
