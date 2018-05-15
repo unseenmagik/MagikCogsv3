@@ -15,7 +15,7 @@ class Members:
         print(msg)
         em = discord.Embed(
             title="Subcommands",
-            description="Here are the sub commands for 'check'",
+            description="Here are the sub commands for 'members'",
             color=discord.Color.blue()
         )
         em.add_field(
