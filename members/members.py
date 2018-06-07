@@ -1,11 +1,13 @@
 import discord
 from discord.ext import commands
+from redbot.core import checks
 
 class Members:
     def __init__(self, bot):
         self.bot = bot
 
     @commands.group(pass_context=True)
+    @checks.admin_or_permissions(administrator=True)
     async def members(self, ctx):
         """Get members via names, count, etc."""
         prefix = ctx.prefix
