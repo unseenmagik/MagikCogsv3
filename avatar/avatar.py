@@ -19,4 +19,4 @@ class Avatar:
                 async with self.session.get(member.avatar_url_as(static_format="png")) as resp:
                     data = await resp.read()
                 file = discord.File(io.BytesIO(data),filename="{}.png".format(member.name))
-            await ctx.send(file=file)
+            await ctx.send(file=file)   
