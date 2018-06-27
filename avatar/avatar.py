@@ -1,6 +1,11 @@
 from discord.ext import commands
+from cogs.utils import checks
+import datetime
 from cogs.utils.dataIO import fileIO
 import discord
+import asyncio
+import os
+from random import choice, randint
 
 class Avatar:
     """View a users avatar"""
