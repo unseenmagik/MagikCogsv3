@@ -1,8 +1,11 @@
 from discord.ext import commands
 import discord
 
-class Avatar:
+class ModLog:
     """View a users avatar"""
+    def __init__(self, bot):
+        self.bot = bot
+        self.direct = "data/avatar/settings.json"
 
     @commands.command(pass_context=True)
     async def avatar(self, ctx, member:discord.Member=None):
