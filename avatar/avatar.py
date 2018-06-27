@@ -1,17 +1,25 @@
-from discord.ext import commands
-from cogs.utils import checks
-import datetime
-from cogs.utils.dataIO import fileIO
+
+from random import choice, randint
+import random
+import aiohttp
 import discord
 import asyncio
+from discord.ext import commands
+from redbot.core import checks, bank
+from redbot.core.utils.chat_formatting import pagify, box
+from redbot.core.data_manager import bundled_data_path
+from redbot.core.data_manager import cog_data_path
+from .data import links, messages
+import datetime
 import os
-from random import choice, randint
+import string
+import time
+import io
+from redbot.core.i18n import Translator
+from redbot.core.utils.chat_formatting import pagify, box
 
-class Avatar:
-    """View a users avatar"""
-    def __init__(self, bot):
-        self.bot = bot
-        self.direct = "data/avatar/settings.json"
+class Avatar():
+    """Cog for pulling a users avatar into a .png file"""
 
     @commands.command(pass_context=True)
     async def avatar(self, ctx, member:discord.Member=None):
