@@ -2,10 +2,9 @@ import discord
 from discord.ext import commands
 from redbot.core import checks
 
-class Avatar():
-    """Cog for pulling a users avatar into a .png file"""
-        def __init__(self, bot):
-            self.bot = bot
+class Avatar:
+    def __init__(self, bot):
+        self.bot = bot
 
     @commands.command(pass_context=True)
     async def avatar(self, ctx, member:discord.Member=None):
