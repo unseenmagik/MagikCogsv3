@@ -1,5 +1,5 @@
 {
-    "AUTHOR" : "Magik",
+    "AUTHOR" : "Magik / TrustyJAID",
     "INSTALL_MSG" : "`[p]avatar <user>` to display a users avatar",
     "NAME" : "Avatar",
     "DISABLED" : false,
