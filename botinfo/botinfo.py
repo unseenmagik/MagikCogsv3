@@ -9,9 +9,8 @@ class Botinfo:
         self.bot = bot
         self.session = aiohttp.ClientSession(loop=self.bot.loop)
     
-    @commands.command()
-    @checks.is_owner()
-    async def botinfo(self, ctx):
+    @commands.command(pass_context=True)
+    async def avatar(self, ctx, member:discord.Member=None):
         """Prints nice bot info command"""
 
     async def on_guild_join(self, guild):
