@@ -5,6 +5,7 @@ from redbot.core import checks
 class Avatar:
     def __init__(self, bot):
         self.bot = bot
+        self.session = aiohttp.ClientSession(loop=self.bot.loop)
 
     @commands.command(pass_context=True)
     async def avatar(self, ctx, member:discord.Member=None):
