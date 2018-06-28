@@ -1,5 +1,3 @@
-from random import choice, randint
-import random
 import aiohttp
 import discord
 import asyncio
