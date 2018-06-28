@@ -3,6 +3,11 @@ import aiohttp
 import io
 from discord.ext import commands
 from redbot.core import checks 
+
+class Botinfo:
+    def __init__(self, bot):
+        self.bot = bot
+        self.session = aiohttp.ClientSession(loop=self.bot.loop)
     
     @commands.command()
     @checks.is_owner()
