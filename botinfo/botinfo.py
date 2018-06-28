@@ -18,7 +18,7 @@ from redbot.core import checks
         text_channels = len([x for x in guild.text_channels])
         voice_channels = len([x for x in guild.voice_channels])
         passed = (datetime.datetime.utcnow() - guild.created_at).days
-        created_at = ("TrustyBot is on {} servers now! \nServer created {}. That's over {} days ago!"
+        created_at = ("This Bot is on {} servers now! \nServer created {}. That's over {} days ago!"
                       "".format(len(self.bot.guilds), guild.created_at.strftime("%d %b %Y %H:%M"),
                                 passed))
 
