@@ -1,0 +1,10 @@
+{
+    "AUTHOR" : "Magik / TrustyJAID",
+    "INSTALL_MSG" : "`[p]botinfo for Bot Information",
+    "NAME" : "Botinfo",
+    "DISABLED" : false,
+    "SHORT" : "Cog for viewing the Bots Information in an embed",
+    "REQUIREMENTS" : ["none"], 
+    "DESCRIPTION" : "Cog for viewing the Bots Information in an embe",
+    "TAGS": ["botinfo"]
+}
