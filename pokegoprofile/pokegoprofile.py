@@ -10,6 +10,10 @@ from discord.ext import commands
 from random import randint
 import asyncio
 
+class Pokegoprofile:
+    def __init__(self, bot):
+        self.bot = bot
+
 orig_gray = None
 resultImage = None
 x = None
