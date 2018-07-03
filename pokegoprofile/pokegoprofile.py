@@ -17,7 +17,7 @@ class Pokegoprofile:
     @commands.command(pass_context=True)
     async def pgp(self, ctx):
         async with ctx.channel.typing():
-		await ctx.send()
+
 	
 orig_gray = None
 resultImage = None
