@@ -14,9 +14,6 @@ class Pokegoprofile:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(pass_context=True)
-    async def pgp(self, ctx):
-        async with ctx.channel.typing():
 
 	
 orig_gray = None
