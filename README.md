@@ -1,5 +1,13 @@
 # MagikCogsv3
 
+[![Discord server](https://discordapp.com/api/guilds/363008468602454017/embed.png)](https://discord.gg/d7YGVbH)
+[![Red cogs](https://img.shields.io/badge/Red--DiscordBot-cogs-red.svg)](https://github.com/Cog-Creators/Red-DiscordBot/tree/V3/develop)
+[![discord.py](https://img.shields.io/badge/discord-py-blue.svg)](https://github.com/Rapptz/discord.py)
+[![Black coding style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![Build status](https://api.travis-ci.org/retke/Laggrons-Dumb-Cogs.svg?branch=v3)](https://travis-ci.org/retke/Laggrons-Dumb-Cogs)
+[![Docs status](https://readthedocs.org/projects/laggrons-dumb-cogs/badge)](http://laggrons-dumb-cogs.readthedocs.io)
+[![Patreon](https://img.shields.io/badge/Patreon-donate-orange.svg)](https://www.patreon.com/magikbot)
+
 Magik Cogs v3 are for Red-DiscordBot v3. Red-DiscordBot is a multipurpose bot for Discord developed by Twentysix26.
 To submit an idea for a cog, DM me on discord. You can always find me at the official server for Red or you can find me on my own Support Server here: https://discord.gg/d7YGVbH
 
@@ -41,8 +49,11 @@ This cog can be used for calculating distances for Pokemon Go ++ users.
 
 
 # Members:
-Use the ``[p]embed`` command for a list of available options. 
-Use this to create embeds and send them to channels or via DM's. 
+Use the ``[p]members`` command for a list of available options. 
+This cog will allow you to search for information on members in your guild, member ID's and total members on the server. 
+Search by ID or Name including part of a name. 
+
+![Artwork](https://cdn.discordapp.com/attachments/461996789764063242/469439283854573598/unknown.png)
 
 Many   thanks to <b>xDp64x#9133</b> for his support on these cogs. 
   
