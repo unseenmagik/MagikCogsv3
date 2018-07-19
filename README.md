@@ -30,35 +30,17 @@ To install the cogs, Follow the given steps:
 
 Where <b>[p]</b> is the prefix for your bot.
 
-# Say:
-Use the ``[p]say <text>`` command to make the bot say what you want.
-  Example: !say I will say what you type here
-  If you send a blank message such as ``[p]say`` you will get a DM from the bot saying the message was empty.
-
-# Away
-Tell the bot that you are away and when someone tags you with @ then the bot will reply with a message that you are away.
-``[p]away`` will give an auto response to tags with a simple message you are away.
-You can also add a message so the bot can say why you are away with ``[p]away <message>``
-Example: ``[p]away I am sleeping. Do not Disturb.`` The bot will return the auto message with your comments.
-  
+ 
 # Distance Calculator:
+This is used for Pokemon Go cooldown times.
 >NOTE: You will need **gpxpy** as a Depencency. use ``pip3 install gpxpy`` in your console. 
 
 Use the ``[p]distance <coords>`` command and the bot will calculate the distance between the two coordinates. You will also be provided with the reccomended cooldown time.
 Example: ``[p]distance 51.301597 -0.598019 51.270664 -0.594132``
 This cog can be used for calculating distances for Pokemon Go ++ users.
 
-# Bot Stats:
-Use the ``[p]botstats`` command and the bot will display a list of commands for you to use. This will display information under the bots username where you see the "Game Status". you can choose a custom message or use the stats of the bot such as ``help, # of servers, # of users`` Dont forget, when you make changes using ``[p]botstats message`` you must first disable the bot stats using ``[p]botstats toggle``. 
-  
-# Pingtime:
-Use the ``[p]pingtime`` command and the bot will display the ping of the bot.
-This cog can be used to see the bots response rate.
 
-# Seen:
-Use the ``[p]seen <@user>`` command and the bot will tell you the last time that member was seen.
-
-# Embed Maker:
+# Members:
 Use the ``[p]embed`` command for a list of available options. 
 Use this to create embeds and send them to channels or via DM's. 
 
