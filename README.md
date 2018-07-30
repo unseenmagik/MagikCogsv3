@@ -2,9 +2,9 @@
 
 Below you will find x4 new cogs for Redbot v3. 
 
-Distance Calculator
-Members
-Avatar
+Distance Calculator,
+Members,
+Avatar and 
 Battleship
 
 # Distance Calculator:
