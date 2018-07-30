@@ -1,5 +1,11 @@
 # MagikCogsv3
 
+Below you will find x4 new cogs for Redbot v3. 
+
+Distance Calculator
+Members
+Avatar
+Battleship
 
 # Distance Calculator:
 This is used for Pokemon Go cooldown times.
