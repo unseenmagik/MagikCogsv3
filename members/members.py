@@ -8,7 +8,7 @@ class Members:
 
     @commands.group(pass_context=True)
     @checks.admin_or_permissions(administrator=True)
-    async def members(self, ctx):
+    async def smembers(self, ctx):
         """Get members via names, count, etc."""
         prefix = ctx.prefix
         msg = ctx.message.content
@@ -17,21 +17,21 @@ class Members:
         print(msg)
         em = discord.Embed(
             title="Subcommands",
-            description="Here are the sub commands for 'members'",
+            description="Here are the sub commands for 'smembers'",
             color=discord.Color.blue()
         )
         em.add_field(
             name="**all**",
-            value="Get all members in the server\nExample: ``{}members all``".format(prefix),
+            value="Get all members in the server\nExample: ``{}smembers all``".format(prefix),
             inline=False
         )
         em.add_field(
             name="**total**",
-            value="Check the total amount of members in your guild!\nExample: ``{}members total`` to list total".format(prefix)
+            value="Check the total amount of members in your guild!\nExample: ``{}smembers total`` to list total".format(prefix)
         )
         em.add_field(
             name="**search**",
-            value="Search through multiple parameters. Type ``{}members search`` for more information.".format(prefix)
+            value="Search through multiple parameters. Type ``{}smembers search`` for more information.".format(prefix)
         )
         if msg == "s":
 
@@ -45,7 +45,7 @@ class Members:
             )
             em.add_field(
                 name="**role**",
-                value="Find all members in a specific role.\nExample: ``{}members search role <role>``".format(prefix),
+                value="Find all members in a specific role.\nExample: ``{}smembers search role <role>``".format(prefix),
                 inline=False
             )
             em.add_field(
@@ -55,7 +55,7 @@ class Members:
             )
             em.add_field(
                 name="**ID**",
-                value="Find a specific person with an ID.\nExample: ``{}members search ID <ID>``".format(prefix),
+                value="Find a specific person with an ID.\nExample: ``{}smembers search ID <ID>``".format(prefix),
                 inline=False
             )
             await ctx.send(embed=em)
@@ -177,17 +177,17 @@ class Members:
             )
             em.add_field(
                 name="**role**",
-                value="Find all members in a specific role.\nExample: ``{}members search role <role>``".format(prefix),
+                value="Find all members in a specific role.\nExample: ``{}smembers search role <role>``".format(prefix),
                 inline=False
             )
             em.add_field(
                 name="**name**",
-                value="Find all members with a similar name.\nExample: ``{}members search name <name>``".format(prefix),
+                value="Find all members with a similar name.\nExample: ``{}smembers search name <name>``".format(prefix),
                 inline=False
             )
             em.add_field(
                 name="**ID**",
-                value="Find a specific person with an ID.\nExample: ``{}members search ID <ID>``".format(prefix),
+                value="Find a specific person with an ID.\nExample: ``{}smembers search ID <ID>``".format(prefix),
                 inline=False
             )
             await ctx.send(embed=em)
@@ -240,7 +240,7 @@ class Members:
             await ctx.send("Total members in the {} role: **{}**".format(role, role_total))
 
     #Get all members
-    #Put this with search, [p]members search all ?
+    #Put this with search, [p]smembers search all ?
     @members.command(pass_context=True)
     async def all(self, ctx):
         guild = ctx.guild
