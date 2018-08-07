@@ -1,0 +1,9 @@
+{
+    "AUTHOR" : "CalebJ",
+    "MODIFIED BY" : "Magik",
+    "INSTALL_MSG" : "Installation Complete.",
+    "NAME" : "Description",
+    "SHORT" : "Set the bot description that shows in help",
+    "DESCRIPTION" : "Set the bot description, or run without an argument to restore the default.",
+    "TAGS" : ["description", "utility", "help"]
+}
