@@ -18,15 +18,15 @@ class Description:
 
     @commands.command()
     @checks.is_owner()
-    async def description(self, *, description: str = None):
+    async def description(self, ctx, *, description: str = None):
         """Sets the bot's description text"""
         if description:
             self.settings['description'] = description
-            await self.bot.say('Bot description set.')
+            await ctx.send('Bot description set.')
         else:
             description = old_description
             self.settings['description'] = None
-            await self.bot.say('Default description restored.')
+            await ctx.send('Default description restored.')
 
         self.bot.description = description
         dataIO.save_json(JSON, self.settings)
@@ -36,9 +36,3 @@ def check_files(bot):
     if not dataIO.is_valid_json(JSON):
         print("Creating default description.json...")
         dataIO.save_json(JSON, {})
-
-
-def setup(bot):
-    check_files(bot)
-    n = Description(bot)
-    bot.add_cog(n)
