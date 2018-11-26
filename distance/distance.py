@@ -1,10 +1,11 @@
-from discord.ext import commands
+from redbot.core import commands
+#from discord.ext import commands
 import discord
 import gpxpy.geo
 import math
 #from math import sin, cos, sqrt, atan2, radians
 
-class Distance:
+class Distance(commands.Cogs:
     """Calculate the distance between two coordinates."""
 
     @commands.command(pass_context = True)
