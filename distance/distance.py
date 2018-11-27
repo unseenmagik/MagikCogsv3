@@ -5,7 +5,7 @@ import gpxpy.geo
 import math
 #from math import sin, cos, sqrt, atan2, radians
 
-class Distance(commands.Cogs):
+class Distance (commands.Cogs):
     """Calculate the distance between two coordinates."""
 
     @commands.command(pass_context = True)
