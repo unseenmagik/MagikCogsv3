@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from redbot.core import checks
 
-class Members:
+class Members(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
