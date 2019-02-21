@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 from redbot.core import checks
-from redbot.core import commads.Cog
 
 class Members (commands.Cog):
     def __init__(self, bot):
