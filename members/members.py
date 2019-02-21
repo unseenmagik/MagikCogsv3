@@ -1,5 +1,5 @@
 import discord
-from discord.ext import commands.Cog
+from discord.ext import commands
 from redbot.core import checks
 
 class Members (commands.Cog):
