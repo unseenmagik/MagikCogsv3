@@ -1,3 +1,5 @@
+from redbot.core import commands
+from redbot.core.utils.predicates import ReactionPredicate, MessagePredicate
 import discord
 import asyncio
 import random
@@ -26,12 +28,17 @@ import textwrap
 # this 9 bit uint for certain values, which represents how many, and
 # what cells a player has filled up.
 
+BaseCog = getattr(commands, "Cog", object)
+ 
+class Tictactoe(BaseCog):
+ 
+    @commands.command()
     async def tictactoe(self, ctx, opponent : discord.Member=None):
         WINNING_STATES = [7, 56, 448, 73, 146, 292, 84, 273]
         monospaced = "```\n{}\n```"
          
         if opponent is None:
-
+            opponent = ctx.bot.user
  
         moves = 0
         ch = ctx.message.channel
@@ -70,7 +77,10 @@ import textwrap
                 msg = "It's {}'s turn. Send a number between 1 and 9 to make a move.".format(players[turn].name)
             return final_msg.format(board, players["X"].name, players["O"].name, msg)
  
-
+        await ctx.send(monospaced.format(display_board()))
+        while True:
+            cell = -1
+            if players[turn] == ctx.bot.user:
                 # right now, just pick a random cell that's not filled
                 # later on a better AI could be made or whatever
                 while True:
@@ -81,22 +91,35 @@ import textwrap
                         cell = move
                         break
             else:
-
+                msg = await ctx.bot.wait_for("message", check=MessagePredicate.same_context(ctx, user=players[turn]))
  
                 if msg.content.lower() in ["quit", "abort", "stop", "exit"]:
                     # because why not
                     if msg.author in players.values():
-
+                        await ctx.send("Game aborted by {}.".format(msg.author))
+                        break
+                    else:
+                        await ctx.send("Only those who are playing the game can abort it.")
                 elif not msg.content.isdigit():
                     continue
  
                 cell = int(msg.content) - 1
                 if cell < 0 or cell > 8:
-
+                    await ctx.send("Invalid move.")
+                    continue
+                elif cells[cell][1] != 0:
+                    await ctx.send("That space is filled already. Pick another.")
                     continue
  
             moves += 1
             score[turn] += cells[cell][0]
             cells[cell][1] = 1 if turn == "X" else 2
             if win(score[turn]):
-
+                await ctx.send(monospaced.format(display_board(turn)))
+                break
+            elif moves == 9:
+                await ctx.send(monospaced.format(display_board("Draw.")))
+                break
+            else:
+                turn = "O" if turn == "X" else "X"
+await ctx.send(monospaced.format(display_board()))
