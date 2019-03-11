@@ -1,0 +1,9 @@
+{
+  "author" : ["Jintaku", "Unseen Magik"],
+  "bot_version": [3,0,0],
+  "install_msg" : "Thanks for adding my repo! hope you find any of my cogs useful",
+  "short" : "Tic Tac Toe - Naughts and Crosses",
+  "description" : "TicTacTow - naughts and corosses",
+  "tags" : ["tictactoe", "naughts", "crosses"],
+  "hidden" : false
+}
